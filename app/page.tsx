@@ -12,10 +12,7 @@ export default function Home() {
               <Cloud className="h-4 w-4" />
               Real-time Weather Data
             </div>
-            <h1 
-              className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
               Weather Dashboard
             </h1>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl">
@@ -36,10 +33,7 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <h2 
-              className="mb-4 text-3xl font-bold tracking-tight text-foreground"
-              style={{ fontFamily: 'var(--font-heading)' }}
-            >
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
               Features
             </h2>
             <p className="text-muted-foreground">Everything you need to track weather conditions</p>
@@ -51,7 +45,7 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                   <Thermometer className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle style={{ fontFamily: 'var(--font-heading)' }}>Current Weather</CardTitle>
+                <CardTitle>Current Weather</CardTitle>
                 <CardDescription>
                   Real-time temperature, humidity, and conditions for any location
                 </CardDescription>
@@ -69,7 +63,7 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
                   <Sun className="h-6 w-6 text-accent" />
                 </div>
-                <CardTitle style={{ fontFamily: 'var(--font-heading)' }}>5-Day Forecast</CardTitle>
+                <CardTitle>5-Day Forecast</CardTitle>
                 <CardDescription>
                   Extended forecast with daily highs, lows, and conditions
                 </CardDescription>
@@ -87,7 +81,7 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-success/10">
                   <Wind className="h-6 w-6 text-success" />
                 </div>
-                <CardTitle style={{ fontFamily: 'var(--font-heading)' }}>Wind & Pressure</CardTitle>
+                <CardTitle>Wind & Pressure</CardTitle>
                 <CardDescription>
                   Detailed wind speed, direction, and atmospheric pressure data
                 </CardDescription>
@@ -105,7 +99,7 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-info/10">
                   <Droplets className="h-6 w-6 text-info" />
                 </div>
-                <CardTitle style={{ fontFamily: 'var(--font-heading)' }}>Precipitation</CardTitle>
+                <CardTitle>Precipitation</CardTitle>
                 <CardDescription>
                   Rain, snow, and precipitation probability tracking
                 </CardDescription>
@@ -123,7 +117,7 @@ export default function Home() {
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-secondary">
                   <MapPin className="h-6 w-6 text-secondary-foreground" />
                 </div>
-                <CardTitle style={{ fontFamily: 'var(--font-heading)' }}>Interactive Maps</CardTitle>
+                <CardTitle>Interactive Maps</CardTitle>
                 <CardDescription>
                   Visual weather maps with radar, temperature, and precipitation layers
                 </CardDescription>
@@ -146,7 +140,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex items-center gap-2">
               <Cloud className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium" style={{ fontFamily: 'var(--font-heading)' }}>
+              <span className="text-sm font-medium">
                 Weather Dashboard
               </span>
             </div>

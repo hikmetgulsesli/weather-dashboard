@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Weather Dashboard",
-  description: "A clean, modern weather application with current conditions, 5-day forecast, and weather maps",
+  description: "A modern weather application with current conditions and forecasts",
 };
 
 export default function RootLayout({
@@ -14,19 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased min-h-screen">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange={false}
-        >
-          <Navbar />
-          <main className="flex-1">
-            {children}
-          </main>
-        </ThemeProvider>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
+      <body className="antialiased">
+        {children}
       </body>
     </html>
   );
