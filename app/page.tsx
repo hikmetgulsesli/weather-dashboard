@@ -1,7 +1,56 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import { Cloud, Sun, Wind, Droplets, Thermometer, MapPin } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { WeatherCard } from "@/components/weather-card"
+import { ForecastSection } from "@/components/forecast-section"
+import { UnitToggle } from "@/components/unit-toggle"
+import { ErrorState } from "@/components/error-state"
+import { WeatherCardSkeleton } from "@/components/weather-skeleton"
+import { fetchCurrentWeather, fetchForecast } from "@/lib/weather-api"
+import { WeatherData, ForecastData, TemperatureUnit } from "@/types/weather"
 
 export default function Home() {
+  const [weather, setWeather] = useState<WeatherData | null>(null);
+  const [forecasts, setForecasts] = useState<ForecastData[]>([]);
+  const [unit, setUnit] = useState<TemperatureUnit>('celsius');
+  const [isLoading, setIsLoading] = useState(true);
+  const [isForecastLoading, setIsForecastLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [forecastError, setForecastError] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function loadWeather() {
+      try {
+        setIsLoading(true);
+        setError(null);
+        const data = await fetchCurrentWeather('London');
+        setWeather(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load weather');
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    async function loadForecast() {
+      try {
+        setIsForecastLoading(true);
+        setForecastError(null);
+        const data = await fetchForecast('London');
+        setForecasts(data);
+      } catch (err) {
+        setForecastError(err instanceof Error ? err.message : 'Failed to load forecast');
+      } finally {
+        setIsForecastLoading(false);
+      }
+    }
+
+    loadWeather();
+    loadForecast();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -29,8 +78,35 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Weather Display Section */}
+      <section className="py-8 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Unit Toggle */}
+          <div className="flex justify-end mb-6 max-w-2xl mx-auto">
+            <UnitToggle unit={unit} onToggle={setUnit} />
+          </div>
+
+          {/* Current Weather */}
+          {isLoading ? (
+            <WeatherCardSkeleton />
+          ) : error ? (
+            <ErrorState message={error} onRetry={() => window.location.reload()} />
+          ) : weather ? (
+            <WeatherCard weather={weather} unit={unit} />
+          ) : null}
+
+          {/* 5-Day Forecast */}
+          <ForecastSection 
+            forecasts={forecasts} 
+            unit={unit} 
+            isLoading={isForecastLoading}
+            error={forecastError}
+          />
+        </div>
+      </section>
+
       {/* Features Grid */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 border-t border-border/40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">

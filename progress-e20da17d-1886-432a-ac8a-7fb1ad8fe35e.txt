@@ -1,0 +1,21 @@
+=== US-004: 5-Day Forecast Display ===
+COMPLETED: 2026-03-02T14:25:00+03:00
+FILES CHANGED:
+- components/forecast-card.tsx
+- components/forecast-section.tsx
+- components/forecast-skeleton.tsx
+- lib/weather-api.ts (added forecast functions)
+- types/weather.ts (added ForecastApiItem, ForecastApiResponse)
+- app/page.tsx (integrated forecast section)
+- __tests__/forecast-card.test.tsx
+- __tests__/forecast-section.test.tsx
+- __tests__/weather-api-forecast.test.ts
+KEY DECISIONS:
+- Used midday forecast (closest to 12:00) for each day's main condition
+- Grouped 3-hour interval data by day using date string
+- Calculated min/max temps from all intervals per day
+- Used max precipitation probability from day's intervals
+- Added "Tomorrow" label for the next day for better UX
+- Responsive grid: 2 cols mobile, 3 cols tablet, 5 cols desktop
+- Hover effects on forecast cards for interactivity
+DEPENDENCIES ADDED: None
