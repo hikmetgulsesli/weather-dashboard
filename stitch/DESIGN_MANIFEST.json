@@ -1,0 +1,39 @@
+{
+  "projectId": "11982020634849248070",
+  "generatedAt": "2026-03-02T11:46:00+03:00",
+  "designSystem": {
+    "aesthetic": "minimal",
+    "palette": "analytics-dashboard",
+    "headingFont": "Plus Jakarta Sans",
+    "bodyFont": "Work Sans",
+    "iconLibrary": "Lucide React"
+  },
+  "screens": [
+    {
+      "id": "US-003",
+      "title": "Current Weather Display",
+      "description": "Main current weather display with temperature, conditions, humidity, wind, and location search",
+      "filename": "US-003.png",
+      "html": "US-003.html"
+    },
+    {
+      "id": "US-004",
+      "title": "5-Day Forecast Display", 
+      "description": "5-day forecast cards showing daily weather with high/low temperatures",
+      "filename": "US-004.png"
+    },
+    {
+      "id": "US-005",
+      "title": "Weather Map Integration",
+      "description": "Interactive weather map with layer toggles and location details panel",
+      "filename": "US-005.png"
+    },
+    {
+      "id": "US-006",
+      "title": "Main Dashboard Overview",
+      "description": "Full dashboard integrating current weather, forecast, map, and additional metrics",
+      "filename": "US-006.png"
+    }
+  ],
+  "notes": "All screens generated using Stitch API with Gemini 3 Pro. Screenshots available for all UI stories."
+}
