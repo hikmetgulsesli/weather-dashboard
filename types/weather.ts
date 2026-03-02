@@ -54,4 +54,32 @@ export interface ForecastData {
   icon: string;
   humidity: number;
   windSpeed: number;
+  precipitationChance: number;
+}
+
+export interface ForecastApiItem {
+  dt: number;
+  main: {
+    temp: number;
+    temp_min: number;
+    temp_max: number;
+    humidity: number;
+  };
+  weather: Array<{
+    main: string;
+    description: string;
+    icon: string;
+  }>;
+  wind: {
+    speed: number;
+  };
+  pop: number;
+}
+
+export interface ForecastApiResponse {
+  list: ForecastApiItem[];
+  city: {
+    name: string;
+    country: string;
+  };
 }

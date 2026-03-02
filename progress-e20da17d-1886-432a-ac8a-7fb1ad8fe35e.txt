@@ -1,0 +1,26 @@
+
+=== US-003: Current Weather Display ===
+COMPLETED: 2026-03-02T13:50:00+03:00
+FILES CHANGED:
+- components/weather-card.tsx
+- components/weather-skeleton.tsx
+- components/unit-toggle.tsx
+- components/error-state.tsx
+- lib/weather-api.ts
+- lib/weather-utils.ts
+- types/weather.ts
+- __tests__/weather-card.test.tsx
+- __tests__/weather-utils.test.ts
+- __tests__/unit-toggle.test.tsx
+- __tests__/error-state.test.tsx
+- app/page.tsx
+- app/layout.tsx
+- app/globals.css
+KEY DECISIONS:
+- Used Lucide React icons instead of emoji for weather conditions
+- Implemented mock data fallback when no API key is provided
+- Created reusable weather utility functions for unit conversions
+- Used Next.js Image component for weather icons from OpenWeatherMap
+- Responsive grid layout for weather metrics
+- Followed Stitch design system with Space Grotesk heading font and DM Sans body font
+DEPENDENCIES ADDED: None
