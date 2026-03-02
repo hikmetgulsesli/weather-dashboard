@@ -1,0 +1,20 @@
+=== US-002: Weather API Client ===
+COMPLETED: 2026-03-02T13:15:00+03:00
+FILES CHANGED: 
+- lib/weather/client.ts
+- lib/weather/client.test.ts
+- lib/weather/cache.ts
+- lib/weather/cache.test.ts
+- lib/weather/errors.ts
+- lib/weather/errors.test.ts
+- lib/weather/types.ts
+- lib/weather/index.ts
+- jest.config.js
+- tsconfig.json (excluded test files from typecheck)
+KEY DECISIONS:
+- Used node-fetch v2 for CommonJS compatibility with Jest
+- Implemented in-memory cache with TTL for API response caching
+- Created custom error classes for different API failure scenarios
+- Added rate limiting detection with user-friendly error messages
+- Excluded test files from TypeScript typecheck to avoid jest type conflicts
+DEPENDENCIES ADDED: node-fetch@^2.7.0, @types/node-fetch@^2.6.13

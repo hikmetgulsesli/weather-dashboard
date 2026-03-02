@@ -1,0 +1,43 @@
+{
+  "projectId": "2369070508883060234",
+  "projectName": "weather-dashboard",
+  "designSystem": {
+    "aesthetic": "modern",
+    "palette": "analytics-dashboard",
+    "headingFont": "Space Grotesk",
+    "bodyFont": "DM Sans",
+    "iconLibrary": "lucide-react"
+  },
+  "screens": [
+    {
+      "id": "main-dashboard",
+      "title": "Weather Dashboard Main Screen",
+      "description": "Current weather display with temperature, conditions, humidity, wind speed",
+      "file": "main-dashboard.png",
+      "device": "DESKTOP"
+    },
+    {
+      "id": "forecast-horizontal",
+      "title": "5-Day Forecast - Horizontal Layout",
+      "description": "Horizontal card-based 5-day forecast display",
+      "file": "forecast-horizontal.png",
+      "device": "DESKTOP"
+    },
+    {
+      "id": "forecast-vertical",
+      "title": "5-Day Forecast - Vertical List",
+      "description": "Vertical list 5-day forecast display",
+      "file": "forecast-vertical.png",
+      "device": "DESKTOP"
+    },
+    {
+      "id": "weather-maps",
+      "title": "Interactive Weather Maps Screen",
+      "description": "Weather map with layer controls, legend, and location search",
+      "file": "weather-maps.png",
+      "device": "DESKTOP"
+    }
+  ],
+  "generated": "2026-03-02T12:34:00Z",
+  "generator": "Stitch API - Gemini 3 Pro"
+}
