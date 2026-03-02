@@ -1,0 +1,7 @@
+STATUS: done
+STITCH_PROJECT_ID: 2369070508883060234
+DEVICE_TYPE: DESKTOP
+SCREENS_GENERATED: 4
+DESIGN_MANIFEST: stitch/DESIGN_MANIFEST.json
+DESIGN_TOKENS: stitch/design-tokens.css
+DESIGN_NOTES: 4 screens already generated: main dashboard, forecast horizontal, forecast vertical, and weather maps. All designs committed in previous run.
